@@ -8,6 +8,8 @@ Features:
 - Unfinished door opens and closes automatically when the player approaches;
 - Plugin with abstract system settings;
 
-Answers to questions in the Google document by the link: https://docs.google.com/document/d/1VqzB__z5W-XzclCFb5HdgK4xrCDBK6w0HQs5VyRqsvQ/edit?usp=sharing
+[Answers to questions in the Google document by the link](https://docs.google.com/document/d/1VqzB__z5W-XzclCFb5HdgK4xrCDBK6w0HQs5VyRqsvQ/edit?usp=sharing)
+
+[Algorithmic task main.cpp](https://github.com/MrRobinGoood/NewTestProject/blob/master/Source/Algorithmic%20task/main.cpp)
 
 Developed with Unreal Engine 4
