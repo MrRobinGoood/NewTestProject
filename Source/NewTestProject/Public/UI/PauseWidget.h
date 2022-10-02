@@ -6,12 +6,21 @@
 #include "Blueprint/UserWidget.h"
 #include "PauseWidget.generated.h"
 
-/**
- * 
- */
+class UButton;
+
 UCLASS()
 class NEWTESTPROJECT_API UPauseWidget : public UUserWidget
 {
 	GENERATED_BODY()
+public:
+	
+
+protected:
+	UPROPERTY(meta = (BindWidget))
+		UButton* ClearPauseButton;
+    virtual void NativeOnInitialized() override;
+private:
+	UFUNCTION()
+		void OnClearPause();
 	
 };

@@ -2,14 +2,20 @@
 
 
 #include "Player/NTPPlayerController.h"
-#include "GameFramework/GameModeBase.h"
+#include "NewTestProject/NewTestProjectGameMode.h"
 
 void ANTPPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
-
-	SetInputMode(FInputModeGameOnly());
-	bShowMouseCursor = false;
+	
+	if (GetWorld())
+	{
+		const auto GameMode = Cast<ANewTestProjectGameMode>(GetWorld()->GetAuthGameMode());
+		if (GameMode)
+		{
+			GameMode->OnMatchStateChanged.AddUObject(this, &ANTPPlayerController::OnMatchStateChanged);
+		}
+	}
 }
 
 void ANTPPlayerController::SetupInputComponent()
@@ -27,4 +33,18 @@ void ANTPPlayerController::OnPauseGame()
 	if (!GetWorld() || !GetWorld()->GetAuthGameMode()) return;
 
 	GetWorld()->GetAuthGameMode()->SetPause(this);
+}
+
+void ANTPPlayerController::OnMatchStateChanged(EMatchState State)
+{
+	if (State == EMatchState::InProgress) 
+	{
+		SetInputMode(FInputModeGameOnly());
+		bShowMouseCursor = false;
+	}
+	else
+	{
+		SetInputMode(FInputModeUIOnly());
+		bShowMouseCursor = true;
+	}
 }

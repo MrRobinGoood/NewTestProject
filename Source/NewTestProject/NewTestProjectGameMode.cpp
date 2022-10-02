@@ -34,6 +34,16 @@ bool ANewTestProjectGameMode::SetPause(APlayerController* PC, FCanUnpause CanUnp
 	return PauseSet;
 }
 
+bool ANewTestProjectGameMode::ClearPause()
+{
+	const auto PauseCleared = Super::ClearPause();
+	if (PauseCleared)
+	{
+		SetMatchState(EMatchState::InProgress);
+	}
+	return PauseCleared;
+}
+
 void ANewTestProjectGameMode::SetMatchState(EMatchState State)
 {	
 	if (MatchState == State) return;

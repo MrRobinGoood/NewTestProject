@@ -18,6 +18,15 @@ class NEWTESTPROJECT_API AGameHUD : public AHUD
 protected:
 	virtual void BeginPlay() override;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "UI")
+		TSubclassOf<UUserWidget> PauseWidgetClass;
+
 private:
-	void OnMatchStateChanged(EMatchState State);
+	UPROPERTY()
+		TMap<EMatchState, UUserWidget*> GameWidgets;
+
+	UPROPERTY()
+		UUserWidget* CurrentWidget = nullptr;
+	
+	void OnMatchStateChanged(EMatchState State);	
 };
