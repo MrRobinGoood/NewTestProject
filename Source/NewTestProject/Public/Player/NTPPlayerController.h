@@ -13,5 +13,16 @@ UCLASS()
 class NEWTESTPROJECT_API ANTPPlayerController : public APlayerController
 {
 	GENERATED_BODY()
+		
+
+public:
 	
+	
+
+protected:
+	virtual void SetupInputComponent() override;
+
+private:
+	void OnPauseGame();
+
 };

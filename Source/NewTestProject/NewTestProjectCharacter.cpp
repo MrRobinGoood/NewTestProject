@@ -9,6 +9,7 @@
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Door/DoorActor.h"
+#include "Player/NTPPlayerController.h"
 
 //////////////////////////////////////////////////////////////////////////
 // ANewTestProjectCharacter
