@@ -36,19 +36,16 @@ void AGameHUD::OnMatchStateChanged(EMatchState State)
 {
 	if (CurrentWidget)
 	{
-		UE_LOG(LogNTPGameHUD, Error, TEXT("YESYESYESYESYESYESYESYESYESUEYSYEYSE"));
 		CurrentWidget->SetVisibility(ESlateVisibility::Hidden);
 	}
 	
 	if (GameWidgets.Contains(State)) 
 	{
-		UE_LOG(LogNTPGameHUD, Error, TEXT("CONCRANTE"));
 		CurrentWidget = GameWidgets[State];
 	}
 	
 	if (CurrentWidget)
 	{
-		UE_LOG(LogNTPGameHUD, Error, TEXT("NO   NO   NO   NO    NO"));
 		CurrentWidget->SetVisibility(ESlateVisibility::Visible);
 	}
 
