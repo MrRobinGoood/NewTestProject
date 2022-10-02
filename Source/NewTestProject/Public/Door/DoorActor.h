@@ -43,7 +43,7 @@ protected:
 
 	//Function which updates our Door's relative location with the timeline graph
 	UFUNCTION()
-		void UpdateTimelineComp(float Output);
+		void UpdateTimelineComp(float Output); 
 
 	// Begin and End Overlap Events for our DoorProxVolume
 	UFUNCTION()

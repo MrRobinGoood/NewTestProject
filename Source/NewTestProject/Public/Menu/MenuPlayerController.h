@@ -13,5 +13,7 @@ UCLASS()
 class NEWTESTPROJECT_API AMenuPlayerController : public APlayerController
 {
 	GENERATED_BODY()
+
+		virtual void BeginPlay() override;
 	
 };
