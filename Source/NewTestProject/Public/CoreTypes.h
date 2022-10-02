@@ -2,7 +2,6 @@
 
 #include "CoreTypes.generated.h"
 
-
 UENUM(BlueprintType)
 enum class EMatchState : uint8
 {

@@ -6,14 +6,10 @@
 #include "GameFramework/GameModeBase.h"
 #include "MenuGameModeBase.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class NEWTESTPROJECT_API AMenuGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 public:
 	AMenuGameModeBase();
-
 };

@@ -6,9 +6,6 @@
 #include "Engine/GameInstance.h"
 #include "NTPGameInstance.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class NEWTESTPROJECT_API UNTPGameInstance : public UGameInstance
 {
@@ -18,6 +15,6 @@ public:
 	FName GetStartupLevelName() const { return StartupLevelName; }
 protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Game")
-		FName StartupLevelName = NAME_None;
+	FName StartupLevelName = NAME_None;
 	
 };

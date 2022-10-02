@@ -49,6 +49,5 @@ void AGameHUD::OnMatchStateChanged(EMatchState State)
 		CurrentWidget->SetVisibility(ESlateVisibility::Visible);
 	}
 
-
 	UE_LOG(LogNTPGameHUD, Display, TEXT("Match state changed: %s"), *UEnum::GetValueAsString(State));
 }

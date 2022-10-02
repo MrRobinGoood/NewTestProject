@@ -6,14 +6,11 @@
 #include "GameFramework/PlayerController.h"
 #include "MenuPlayerController.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class NEWTESTPROJECT_API AMenuPlayerController : public APlayerController
 {
 	GENERATED_BODY()
-
-		virtual void BeginPlay() override;
+protected:
+	virtual void BeginPlay() override;
 	
 };

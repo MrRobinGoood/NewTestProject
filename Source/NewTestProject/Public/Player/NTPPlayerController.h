@@ -7,19 +7,12 @@
 #include "NewTestProject/Public/CoreTypes.h"
 #include "NTPPlayerController.generated.h"
 
-/**
- * 
- */
+
 UCLASS()
 class NEWTESTPROJECT_API ANTPPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 		
-
-public:
-	
-	
-
 protected:
 	virtual void BeginPlay() override;
 	virtual void SetupInputComponent() override;

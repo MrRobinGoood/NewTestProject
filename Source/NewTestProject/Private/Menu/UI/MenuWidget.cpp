@@ -1,6 +1,5 @@
 // New Test Project Game. All Rights Reserved.
 
-
 #include "Menu/UI/MenuWidget.h"
 #include "Components/Button.h"
 #include "Kismet/GameplayStatics.h"
@@ -23,8 +22,7 @@ void UMenuWidget::NativeOnInitialized()
 }
 
 void UMenuWidget::OnStartGame()
-{
-	
+{	
 	if (!GetWorld()) return;
 
 	const auto NTPGameInstance = GetWorld()->GetGameInstance<UNTPGameInstance>();

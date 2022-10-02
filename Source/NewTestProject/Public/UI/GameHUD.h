@@ -7,9 +7,6 @@
 #include "NewTestProject/Public/CoreTypes.h"
 #include "GameHUD.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class NEWTESTPROJECT_API AGameHUD : public AHUD
 {
@@ -19,14 +16,14 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "UI")
-		TSubclassOf<UUserWidget> PauseWidgetClass;
+	TSubclassOf<UUserWidget> PauseWidgetClass;
 
 private:
 	UPROPERTY()
-		TMap<EMatchState, UUserWidget*> GameWidgets;
+	TMap<EMatchState, UUserWidget*> GameWidgets;
 
 	UPROPERTY()
-		UUserWidget* CurrentWidget = nullptr;
+	UUserWidget* CurrentWidget = nullptr;
 	
 	void OnMatchStateChanged(EMatchState State);	
 };
