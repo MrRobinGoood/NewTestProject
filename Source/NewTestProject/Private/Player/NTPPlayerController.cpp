@@ -4,6 +4,14 @@
 #include "Player/NTPPlayerController.h"
 #include "GameFramework/GameModeBase.h"
 
+void ANTPPlayerController::BeginPlay()
+{
+	Super::BeginPlay();
+
+	SetInputMode(FInputModeGameOnly());
+	bShowMouseCursor = false;
+}
+
 void ANTPPlayerController::SetupInputComponent()
 {	
 	Super::SetupInputComponent();

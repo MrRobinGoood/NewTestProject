@@ -13,7 +13,7 @@ UCLASS()
 class NEWTESTPROJECT_API ANTPPlayerController : public APlayerController
 {
 	GENERATED_BODY()
-		
+		virtual void BeginPlay() override;
 
 public:
 	
